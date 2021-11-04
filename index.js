@@ -9,3 +9,46 @@ console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in una funzione.
  */
 
+/**
+ * 1. Formare un array di oggetti con le info di tutti i membri del team.
+ * 
+ */
+
+
+
+const team = [
+    {
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        photo: 'img/wayne-barnett-founder-ceo.jpg',
+    },
+    {
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        photo: 'img/img\angela-caroll-chief-editor.jpg',
+    },
+    {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        photo: 'img/img\walter-gordon-office-manager.jpg',
+    },
+    {
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        photo: 'img/img\angela-lopez-social-media-manager.jpg',
+    },
+    {
+        name: 'Scott Estrada',
+        role: 'Developer',
+        photo: 'img/img\scott-estrada-developer.jpg',
+    },
+    {
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        photo: 'img/img\barbara-ramos-graphic-designer.jpg',
+    },
+];
+
+console.log(team);
+console.table(team);
+
