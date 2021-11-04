@@ -25,30 +25,50 @@ const team = [
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        photo: 'img/img\angela-caroll-chief-editor.jpg',
+        photo: 'img/angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        photo: 'img/img\walter-gordon-office-manager.jpg',
+        photo: 'img/walter-gordon-office-manager.jpg',
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        photo: 'img/img\angela-lopez-social-media-manager.jpg',
+        photo: 'img/angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        photo: 'img/img\scott-estrada-developer.jpg',
+        photo: 'img/scott-estrada-developer.jpg',
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        photo: 'img/img\barbara-ramos-graphic-designer.jpg',
+        photo: 'img/barbara-ramos-graphic-designer.jpg',
     },
 ];
 
 console.log(team);
 console.table(team);
 
+const cardsContainer = document.querySelector('.team-container');
+
+for(let i = 0; i < team.length; i++) {
+    const cardItem = team[i];
+    console.log(cardItem);
+
+    cardsContainer.innerHTML += `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="${cardItem.photo}"
+            alt="${cardItem.name}"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${cardItem.name}</h3>
+            <p>${cardItem.role}</p>
+        </div>
+    </div>`;
+}
