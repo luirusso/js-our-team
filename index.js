@@ -11,10 +11,9 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in una fun
 
 /**
  * 1. Formare un array di oggetti con le info di tutti i membri del team.
- * 
+ * 2. Far stampare nell'html tutte le card dei membri del team.
+ * 3. Creare una funzione che permetta agli utenti di inserire nuovi membri del team.
  */
-
-
 
 const team = [
     {
@@ -56,7 +55,6 @@ const cardsContainer = document.querySelector('.team-container');
 
 for(let i = 0; i < team.length; i++) {
     const cardItem = team[i];
-    console.log(cardItem);
 
     cardsContainer.innerHTML += `
     <div class="team-card">
@@ -69,6 +67,41 @@ for(let i = 0; i < team.length; i++) {
         <div class="card-text">
             <h3>${cardItem.name}</h3>
             <p>${cardItem.role}</p>
+        </div>
+    </div>`;
+}
+
+const addNewMemberBtn = document.getElementById('addMemberButton');
+console.log(addNewMemberBtn);
+addNewMemberBtn.addEventListener('click', function() {
+
+const name = document.getElementById('name').value;
+console.log(name);
+const role = document.getElementById('role').value;
+console.log(role);
+const photo = document.getElementById('image').value;
+console.log(photo);
+
+    addNewMember(name, role, photo);
+});
+
+
+/**
+ * Add new members from user input
+ */
+
+function addNewMember (name, role, photo) {
+    cardsContainer.innerHTML += `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="${photo}"
+            alt="${name}"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${name}</h3>
+            <p>${role}</p>
         </div>
     </div>`;
 }
