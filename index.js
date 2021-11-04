@@ -51,6 +51,13 @@ const team = [
 console.log(team);
 console.table(team);
 
+const nameInput = document.getElementById('name');
+
+const roleInput = document.getElementById('role');
+
+const photoInput = document.getElementById('image');
+
+
 const cardsContainer = document.querySelector('.team-container');
 
 for(let i = 0; i < team.length; i++) {
@@ -73,16 +80,14 @@ for(let i = 0; i < team.length; i++) {
 
 const addNewMemberBtn = document.getElementById('addMemberButton');
 console.log(addNewMemberBtn);
+
 addNewMemberBtn.addEventListener('click', function() {
 
-const name = document.getElementById('name').value;
-console.log(name);
-const role = document.getElementById('role').value;
-console.log(role);
-const photo = document.getElementById('image').value;
-console.log(photo);
+    addNewMember(nameInput.value, roleInput.value, photoInput.value);
 
-    addNewMember(name, role, photo);
+    nameInput.value = '';
+    roleInput.value = '';
+    photoInput.value = '';
 });
 
 
